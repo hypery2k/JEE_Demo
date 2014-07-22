@@ -1,5 +1,5 @@
-JEE_Demo
-========
+# JEE_Demo
+
  This is your project! It's a sample, deployable Maven 2 project to help you
  get your foot in the door developing with Java EE 6. This project is setup to
  allow you to create a compliant Java EE 6 application using JSF 2.0, CDI 1.0,
@@ -8,8 +8,7 @@ JEE_Demo
  and transaction code to help you get your feet wet with database access in
  enterprise Java. 
 
- System requirements
- ===================
+## System requirements
 
  All you need to run this project is Java 5.0 (Java SDK 1.5) or greator and
  Maven 2.0.10 or greater. This application is setup to be run on a Java EE 6
@@ -24,14 +23,13 @@ JEE_Demo
  because there are certain Java EE API JARs that are not yet publised to the
  Maven Central Repository (see https://jira.jboss.org/jira/browse/WELD-222)
 
- Deploying the application
- =========================
+## Deploying the application
 
  To deploy the application to JBoss AS (standalone), first make sure that the
  JBOSS_HOME environment variable points to a JBoss AS 6.0 installation.
  Alternatively, you can set the location of JBoss AS using the following
  profile defintion in the .m2/settings.xml file in your home directory:
-
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <settings
    xmlns="http://maven.apache.org/POM/4.0.0"
@@ -50,11 +48,11 @@ JEE_Demo
       </profile>
    </profiles>
    
-</settings>
-
+</settings>```
+```
  You can now deploy to JBoss AS by executing the following command:
 
-  mvn package jboss:hard-deploy
+  `mvn package jboss:hard-deploy`
 
  Start JBoss AS. The application will be running at the following URL:
 
@@ -66,15 +64,16 @@ JEE_Demo
   src/main/resources/META-INF/persistence.xml
 
  Change the value of <jta-data-source> to the following:
-
+  ```xml
   <jta-data-source>jdbc/__default</jta-data-source>
+  ```
 
  This configuration uses the built-in default Derby DataSource in GlassFish.
  Optionally, you can use an alternative DataSource of your choice.
  
  Now, execute the command:
 
-  mvn package
+  `mvn package`
  
  You can now deploy the target/maven-archetype-j2ee-simple.war archive and launch the
  application the through GlassFish administration console.
@@ -84,18 +83,19 @@ JEE_Demo
 
  To run the application using embedded GlassFish, execute this command:
 
-  mvn package embedded-glassfish:run
+  `mvn package embedded-glassfish:run`
 
  The application will be running at the following URL:
  
   http://localhost:7070/maven-archetype-j2ee-simple
 
- Importing the project into an IDE
- =================================
+## Importing the project into an IDE
+
 
  If you created the project using the Maven 2 archetype wizard in your IDE
  (Eclipse, NetBeans or IntelliJ IDEA), then there is nothing to do. You should
  already have an IDE project.
+ Alternativly run `mvn eclipse:eclipse`
 
  If you created the project from the commandline using archetype:generate, then
  you need to bring the project into your IDE. If you are using NetBeans 6.8 or
@@ -113,14 +113,14 @@ JEE_Demo
  Once in the IDE, you can execute the Maven commands through the IDE controls
  to run the application on an embedded Servlet Container.
 
- Resources
- =========
+## Resources
+
 
  Weld archetypes:
- -  Quickstart:        http://seamframework.org/Documentation/WeldQuickstartForMavenUsers
- -  Issue tracker:     https://jira.jboss.org/jira/browse/WELDX
- -  Source code:       http://anonsvn.jboss.org/repos/weld/archetypes
- -  Forums:            http://seamframework.org/Community/WeldUsers
- JSR-299 overview:     http://seamframework.org/Weld
- JSF community site:   http://www.javaserverfaces.org
+* Quickstart:        http://seamframework.org/Documentation/WeldQuickstartForMavenUsers
+* Issue tracker:     https://jira.jboss.org/jira/browse/WELDX
+* Source code:       http://anonsvn.jboss.org/repos/weld/archetypes
+* Forums:            http://seamframework.org/Community/WeldUsers
+* JSR-299 overview:     http://seamframework.org/Weld
+* JSF community site:   http://www.javaserverfaces.org
 
