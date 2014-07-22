@@ -48,7 +48,7 @@
       </profile>
    </profiles>
    
-</settings>```
+</settings>
 ```
  You can now deploy to JBoss AS by executing the following command:
 
