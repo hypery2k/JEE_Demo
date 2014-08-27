@@ -5,8 +5,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import org.junit.BeforeClass;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Common base for all JPA related tests. This class inits the persistence
@@ -17,12 +15,9 @@ import org.slf4j.LoggerFactory;
  */
 public class JPAHelper {
 
-	// Logging object
-	private static final Logger LOG = LoggerFactory.getLogger(JPAHelper.class);
-
 	protected static EntityManagerFactory emf;
 
-	protected static EntityManager em;
+	protected static EntityManager        em;
 
 	/**
 	 * Set up entity maneger and factory
